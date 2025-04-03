@@ -10,26 +10,30 @@ class PantallaInicio extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => PantallaStateless()),
-                );
-              },
-              child: Text('Ir a StatelessWidget'),
+          children:[
+            Text(
+              'Bienvenido',
+              style: TextStyle(fontSize: 24),
             ),
             ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => PantallaStateful()),
-                );
-              },
-              child: Text('Ir a StatefulWidget'),
-            ),
-          ],
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PantallaStateless()),
+                  );
+                },
+                child: Text('Ir a StatelessWidget'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PantallaStateful()),
+                  );
+                },
+                child: Text('Ir a StatefulWidget'),
+              ),             
+          ],          
         ),
       ),
     );
