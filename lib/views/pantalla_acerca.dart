@@ -13,6 +13,12 @@ class PantallaAcerca extends StatelessWidget {
             'Sobre nosotros',
             style: TextStyle(fontSize: 24),
             ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context); // Regresa a la pantalla anterior
+                },
+                child: Text('Volver'),
+              ),
           ]
         )
       ),
