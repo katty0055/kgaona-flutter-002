@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'pantalla_stateless.dart';
 import 'pantalla_stateful.dart';
+import 'pantalla_acerca.dart';
+import 'pantalla_contacto.dart';
 
 class PantallaInicio extends StatelessWidget {
   @override
@@ -14,6 +16,24 @@ class PantallaInicio extends StatelessWidget {
             Text(
               'Bienvenido',
               style: TextStyle(fontSize: 24),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PantallaAcerca()),
+                );
+              },
+              child: Text('Ir a Acerca de'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PantallaContacto()),
+                );
+              },
+              child: Text('Ir a Contacto'),
             ),
             ElevatedButton(
                 onPressed: () {

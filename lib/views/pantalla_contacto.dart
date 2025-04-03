@@ -6,10 +6,15 @@ class PantallaContacto extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Contacto')),
       body: Center(
-        child: Text(
-          'Contáctanos',
-          style: TextStyle(fontSize: 24),
-        ),
+        child:Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Contáctanos',
+              style: TextStyle(fontSize: 24),
+            ),
+          ],
+        ),        
       ),
     );
   }

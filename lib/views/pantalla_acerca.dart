@@ -6,10 +6,15 @@ class PantallaAcerca extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Acerca de')),
       body: Center(
-        child: Text(
-          'Sobre nosotros',
-          style: TextStyle(fontSize: 24),
-        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [ 
+            Text(
+            'Sobre nosotros',
+            style: TextStyle(fontSize: 24),
+            ),
+          ]
+        )
       ),
     );
   }
