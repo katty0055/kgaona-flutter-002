@@ -1,6 +1,27 @@
 import 'package:flutter/material.dart';
 
-class PantallaContacto extends StatelessWidget {
+class PantallaContacto extends StatefulWidget {
+  @override
+  _PantallaContactoState createState() => _PantallaContactoState();
+}
+
+class _PantallaContactoState extends State<PantallaContacto> {
+  final TextEditingController _controller = TextEditingController(); // Controlador para el TextField
+
+ @override
+  void initState() {
+    super.initState();
+    print('PantallaContacto: initState llamado'); // Mensaje al inicializar la pantalla
+  }
+
+  @override
+  void dispose() {
+    print('PantallaContacto: dispose llamado'); // Mensaje al cerrar la pantalla
+    print('Mensaje ingresado: ${_controller.text}'); // Imprime el mensaje ingresado
+    _controller.dispose(); // Libera los recursos del controlador
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +47,16 @@ class PantallaContacto extends StatelessWidget {
             Text(
               'Contáctanos',
               style: TextStyle(fontSize: 24),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: TextField(
+                controller: _controller, // Asigna el controlador al TextField
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Escribe tu mensaje',
+                ),
+              ),
             ),
           ],
         ),        
